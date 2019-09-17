@@ -5,3 +5,4 @@ window.getRandom = function(min, max) {
 window.calculatePercent = function(percent) {
     return (100 - percent) <= getRandomNumber(0, 100);
 }
+

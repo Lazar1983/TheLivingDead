@@ -2,25 +2,27 @@ function War (name) {
     this.humans = [];
     this.zombies = [];
 
-    console.log(this.humans);
-    console.log(this.zombies);
-
     this.isFighting = function () {
         for (let index = 0; index < this.humans.length; index++) {
-            const victim = false;
-            while (this.zombies > 0) {
-                if(this.isAlive) {
-                    if(this.headShot) {
-                        this.zombies = victim;
-                    }
-                }
+            while(this.humans > 0) {
+                this.weapons = this.zombies.health--;
+            }
+            if (this.bite = true) {
+
             }
         }
     }
- 
+    this.isFighting();
+
+    this.killZombies = function () {
+        while(this.zombies > 0) {
+            
+        }
+    }
+
     this.generateHumans = function () {
         for (let i = 0; i < getRandom(5,10); i++) {
-            this.humans.push(new Human("Human" + i));
+            this.humans.push(new Human(this.name));
         }
     }
 
