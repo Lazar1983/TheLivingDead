@@ -1,28 +1,12 @@
+const namesArray = ["Alicia", "Jack", "Elena", "Lazar", "Stephan", "Troy", "Nick", "Ingrid", "Michelle", "Daryll"];
+const weaponsArray = ["Knife", "Riffle", "Machete", "Pistol", "Baseball bat"];
+
 function Human (name) {
-    this.name = [];
-    this.health = 100;
-    this.weapons = [];
+    this.name = namesArray[getRandom(0, (namesArray.length - 1))];
+    this.weapons = weaponsArray[getRandom(0, (weaponsArray.length - 1))];
+    this.health = getRandom(85,100);
+    this.damage = getRandom(90,100);
 
-
-
-    this.getWeapon = function() {
-        const weaponsArray = ["Knife", "Riffle", "Machete", "Pistol", "Baseball bat"]
-        const randomWeapon = weaponsArray[getRandom(0,4)];
-        this.weapons.push(randomWeapon);
-    }
-
-    // this.specialAttack = function () {
-    //     this.weapons = 
-    // }
-
-    this.generateNames = function () {
-        const namesArray = ["Alicia", "Jack", "Elena", "Lazar", "Stephan", "Troy", "Nick", "Ingrid", "Michelle", "Daryll"];
-        const randomName = namesArray[getRandom(0,9)];
-        this.name.push(randomName);
-    }
-
-    this.getWeapon();
-    this.generateNames();
 
 
 
