@@ -2,17 +2,14 @@ function Zombie(name) {
     this.name = name;
     this.health = getRandom(60,90);
     this.damage = getRandom(10,80);
-    this.isKilled = calculatePercent(80);
-    this.recieveDamage = 0;
+    this.bite = calculatePercent(20);
 
-    this.headShot = function () {
-        if (this.isKilled === true) {
-            this.health = this.recieveDamage;
-            console.log(` ${this.name} has been killed `);
-        }
+    this.hasBiten = function(target) {
+        if(target.bite = true) {
+            target.health = 0;
+            console.log(`${this.name} has bite`, target)
+        } 
     }
-
-    // this.headShot();
 
 }
 

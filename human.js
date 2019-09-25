@@ -6,25 +6,15 @@ function Human (name) {
     this.weapons = weaponsArray[getRandom(0, (weaponsArray.length - 1))];
     this.health = getRandom(85,100);
     this.damage = getRandom(90,100);
-    this.isBitten = calculatePercent(20);
-    this.recieveDamage = 0;
+    this.killZombie = calculatePercent(80);
 
-
-    this.isKilledZombie = function () {
-        const damage = 100;
-        
+    this.isKilled = function(target) {
+        if(target.killZombie = true) {
+            target.health = 0;
+            console.log(`${this.name} has killed`, target)
+        } 
     }
-
-    this.hasBiten = function () {
-        if (this.isBitten === true) {
-            this.health = this.recieveDamage;
-            console.log(` ${this.name} has been biten and died `);
-        }
-    }
-
-    this.hasBiten();
-
-    
+  
 
 }
 
